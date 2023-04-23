@@ -9,10 +9,6 @@
 		"start": "node bot.js",
 		"dev": "nodemon bot.js"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/NamVr/DiscordBot-Template.git"
-	},
 	"keywords": [
 		"discord-js"
 	],
