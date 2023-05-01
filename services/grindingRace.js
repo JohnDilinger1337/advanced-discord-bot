@@ -3,7 +3,7 @@ const { buildEmbed } = require("../functions");
 
 module.exports = async (client) => {
 	/**
-	 * Executes when the bot is ready.
+	 * @description Executes when client is ready (bot initialization).
 	 * @param {import('../typings').Client} client - The main application client.
 	 */
 

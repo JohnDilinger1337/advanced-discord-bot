@@ -56,18 +56,18 @@ module.exports = {
 			.setPlaceholder("Leave it empty if you don't wanna add image.")
 			.setRequired(false);
 
-		const dateInput = new TextInputBuilder()
-			.setCustomId("giveaway_date")
+		const durationInput = new TextInputBuilder()
+			.setCustomId("giveaway_duration")
 			.setLabel("Giveaway Date:")
 			.setStyle(TextInputStyle.Short)
 			.setPlaceholder("eg. (1d 3h 10m)")
 			.setRequired(true);
 
-		const channelInput = new TextInputBuilder()
-			.setCustomId("giveaway_channel")
-			.setLabel("Giveaway Channel:")
+		const winnersInput = new TextInputBuilder()
+			.setCustomId("giveaway_winners")
+			.setLabel("Winners Cout:")
 			.setStyle(TextInputStyle.Short)
-			.setPlaceholder("The giveaway channel to be posted in!")
+			.setPlaceholder("The giveaway winners cout!")
 			.setRequired(true);
 
 		// An action row only holds one text input,
@@ -78,16 +78,19 @@ module.exports = {
 
 		const imageActionRow = new ActionRowBuilder().addComponents(imageInput);
 
-		const channelActionRow = new ActionRowBuilder().addComponents(channelInput);
+		const durationActionRow = new ActionRowBuilder().addComponents(
+			durationInput
+		);
 
-		const dateActionRow = new ActionRowBuilder().addComponents(dateInput);
+		const winnersActionRow = new ActionRowBuilder().addComponents(winnersInput);
+
 		// Add inputs to the modal
 		modal.addComponents(
 			titleActionRow,
 			messageActionRow,
 			imageActionRow,
-			channelActionRow,
-			dateActionRow
+			durationActionRow,
+			winnersActionRow
 		);
 
 		// Show the modal to the user
